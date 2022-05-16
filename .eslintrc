@@ -1,0 +1,22 @@
+{
+  "root": true,
+  "extends": ["plugin:prettier/recommended"],
+  "parserOptions": {
+    "ecmaVersion": 2020,
+    "sourceType": "module"
+  },
+  "env": {
+    "node": true,
+    "mocha": true,
+    "es6": true
+  },
+  "rules": {
+    "ban-ts-comment": "off",
+    "no-unused-vars": ["error"],
+    "interface-name-prefix": "off",
+    "explicit-function-return-type": "off",
+    "no-console": ["error", { "allow": ["warn", "error", "debug"] }],
+    "quotes": ["error", "single", { "allowTemplateLiterals": true }]
+  },
+  "ignorePatterns": ["/*.*"]
+}

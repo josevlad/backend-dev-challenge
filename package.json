@@ -1,0 +1,42 @@
+{
+  "name": "backend-dev-challenge",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app",
+    "start:dev": "nodemon app",
+    "test": "lab -v --leaks",
+    "lint:fix": "eslint . --ext .js --fix",
+    "prettier:fix": "prettier --config .prettierrc --write ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@hapi/hapi": "^20.2.2",
+    "@hapi/inert": "^6.0.5",
+    "@hapi/vision": "^6.1.0",
+    "axios": "^0.27.2",
+    "dotenv": "^16.0.1",
+    "hapi-swagger": "^14.5.0",
+    "i": "^0.3.7",
+    "joi": "^17.6.0",
+    "mongoose": "^6.3.3",
+    "mongoose-paginate-v2": "^1.6.3",
+    "mongoose-sequence": "^5.3.1",
+    "mongoose-ttl": "0.0.3",
+    "npm": "^8.10.0",
+    "overwrite-system-logs": "^1.0.2"
+  },
+  "devDependencies": {
+    "@hapi/code": "^9.0.0",
+    "@hapi/lab": "^25.0.1",
+    "eslint": "^8.15.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "nodemon": "^2.0.16",
+    "prettier": "^2.6.2",
+    "prettier-eslint": "^14.0.3"
+  }
+}

@@ -51,7 +51,7 @@ by http
 To solve this problem and have the api deliver a USD->ARS and ARS->USD flow, you have to make this request:
 
 ```
-curl --location --request GET 'http://localhost:8080/api/health?cache=true' \
+curl --location --request GET 'http://localhost:8081/api/health?cache=true' \
 --header 'accept: application/json'
 ```
 

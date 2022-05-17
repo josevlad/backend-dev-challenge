@@ -79,7 +79,7 @@ exports.findAllQuotations = async ({ query, params }, reply) => {
       };
     });
 
-    console.debug({ all });
+    console.debug({ ...docs, ...all });
     const { totalDocs, totalPages, page, limit } = all;
     return reply.response({ docs, totalDocs, totalPages, page, limit }).code(200);
   } catch (err) {

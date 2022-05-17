@@ -3,17 +3,16 @@
 const { Cache } = require('../model');
 
 exports.health = async (req, reply) => {
-  console.debug({ req });
   const { cache = false } = req.query;
   if (cache) {
     try {
-      let hasCache = Cache.findOne({ key: 'USD->ARS' });
+      let hasCache = await Cache.findOne({ key: 'USD->ARS' });
       if (!hasCache) {
         const cache = new Cache({ key: 'USD->ARS', rate: 200 });
         await cache.save();
       }
 
-      hasCache = Cache.findOne({ key: 'ARS->USD' });
+      hasCache = await Cache.findOne({ key: 'ARS->USD' });
       if (!hasCache) {
         const cache = new Cache({ key: 'ARS->USD', rate: 0.004879 });
         await cache.save();

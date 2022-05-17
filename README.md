@@ -18,7 +18,7 @@ This api is deployed on an aws EC2 machine, it can be accessed at the following 
 
 ### IMPORTANT!
 
-At the moment of doing the integration tests, the api should give as response these 2 messages:
+When doing the integration tests, the api gave these 2 messages as a response:
 
 by https
 ```

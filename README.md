@@ -8,7 +8,7 @@ AUTOR: **Vladimir Castañeda**
 docker-compose up
 ```
 
-After the containers are up (app and mongo), you can access the api documentation: [http://localhost:8081/api/docs](localhost:8081/api/docs)
+After the containers are up (app and mongo), you can access the api documentation: [http://localhost:8081/api/docs](http://localhost:8081/api/docs)
 
 Inside the postman directory there are 2 files containing the variables and requests to the api. These files can be uploaded to the postman app.
 
@@ -55,4 +55,4 @@ curl --location --request GET 'http://localhost:8080/api/health?cache=true' \
 --header 'accept: application/json'
 ```
 
-This creates a cache record that will last 10 minutes and requests will take that data (1 USD - 200 ARS) and make the corresponding calculations for the requested request.
+This creates 2 records in cache that will last 10 minutes and the requests will take that data (1 USD -> 200 ARS / 1 ARS -> 0.004879 USD) and will make the corresponding calculations for the requested requests (USD->ARS and ARS->USD).

@@ -23,7 +23,7 @@ services:
       - CURRENCIES=EUR,USD,BRL,ARS
       - FIXER_URL=https://data.fixer.io/api/convert
       - FIXER_API_KEY=824e753b9d8f1bf170e5adf80e7788e9
-      - RESPONSE_TTL=24h #10m #must to be
+      - RESPONSE_TTL=10m
 
   mongo-db:
     container_name: mongo-db

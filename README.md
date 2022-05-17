@@ -48,7 +48,7 @@ by http
 }
 ```
 
-To solve this issue and have the api deliver a USD->ARS flow, you have to make this request:
+To solve this problem and have the api deliver a USD->ARS and ARS->USD flow, you have to make this request:
 
 ```
 curl --location --request GET 'http://localhost:8080/api/health?cache=true' \

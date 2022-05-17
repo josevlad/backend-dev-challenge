@@ -2,7 +2,7 @@
 
 AUTOR: **Vladimir Castañeda**
 
-## local run
+## Local run
 
 ```bash
 docker-compose up

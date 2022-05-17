@@ -1,4 +1,4 @@
-'use strit';
+'use strict';
 
 const { Exchanger } = require('../model');
 const { getPaginationInfo, checkDulplicates } = require('../utils');

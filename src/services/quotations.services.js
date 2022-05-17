@@ -1,4 +1,4 @@
-'use strit';
+'use strict';
 
 const axios = require('axios');
 

@@ -31,6 +31,13 @@ const getApiResponse = async ({ from, to, amount }) => {
   return { rate, result };
 };
 
+const formatCurrencyNumber = (num, currency) => {
+  const style = 'currency';
+  const minimumFractionDigits = getEnv('MINIMUM_FRACTION_DIGITS');
+  const maximumFractionDigits = getEnv('MAXIMUM_FRACTION_DIGITS');
+  return num.toLocaleString(undefined, { style, currency, minimumFractionDigits, maximumFractionDigits });
+};
+
 exports.findAllQuotations = async ({ query, params }, reply) => {
   try {
     let all;
@@ -62,7 +69,7 @@ exports.findAllQuotations = async ({ query, params }, reply) => {
       const { feePercentage, name, exchangerId } = exchanger;
       const pair = `${from}->${to}`;
       const exchangerName = name;
-      const originalRateAmount = result.toLocaleString('en-US', { style: 'currency', currency: to });
+      const originalRateAmount = formatCurrencyNumber(result, to);
       const exchangerFeePercentage = `${feePercentage}%`;
       const exchangerFeeAmount = (feePercentage * result) / 100;
       const deliveryRateAmount = result - exchangerFeeAmount;
@@ -71,11 +78,11 @@ exports.findAllQuotations = async ({ query, params }, reply) => {
         exchangerId,
         exchangerName,
         pair,
-        rate: rate.toLocaleString('en-US', { style: 'currency', currency: from }),
+        rate: formatCurrencyNumber(rate, from),
         originalRateAmount,
         exchangerFeePercentage,
-        exchangerFeeAmount: exchangerFeeAmount.toLocaleString('en-US', { style: 'currency', currency: to }),
-        deliveryRateAmount: deliveryRateAmount.toLocaleString('en-US', { style: 'currency', currency: to })
+        exchangerFeeAmount: formatCurrencyNumber(exchangerFeeAmount, to),
+        deliveryRateAmount: formatCurrencyNumber(deliveryRateAmount, to)
       };
     });
 

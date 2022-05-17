@@ -56,7 +56,7 @@ In local environment:
 curl --location --request GET 'http://localhost:8081/api/health?cache=true' \
 --header 'accept: application/json'
 
-or in the aws environment
+or in the aws environment:
 
 curl --location --request GET 'http://3.85.32.240:8081/api/health?cache=true' \
 --header 'accept: application/json'

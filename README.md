@@ -55,4 +55,4 @@ curl --location --request GET 'http://localhost:8081/api/health?cache=true' \
 --header 'accept: application/json'
 ```
 
-This creates 2 records in cache that will last 10 minutes and the requests will take that data (1 USD -> 200 ARS / 1 ARS -> 0.004879 USD) and will make the corresponding calculations for the requested requests (USD->ARS and ARS->USD).
+This creates 2 cache records that will last 10 minutes and the requests will take that data (1 USD -> 200 ARS / 1 ARS -> 0.004879 USD) and do the calculations corresponding to the requests (USD->ARS and ARS ->USD) .

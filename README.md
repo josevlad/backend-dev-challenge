@@ -12,7 +12,7 @@ After the containers are up (app and mongo), you can access the api documentatio
 
 Inside the postman directory there are 2 files containing the variables and requests to the api. These files can be uploaded to the postman app.
 
-## Api in AWS EC2 
+## Api in AWS EC2
 
 This api is deployed on an aws EC2 machine, it can be accessed at the following url: [http://3.85.32.240:8081/api/docs](http://3.85.32.240:8081/api/docs)
 
@@ -21,6 +21,7 @@ This api is deployed on an aws EC2 machine, it can be accessed at the following 
 When doing the integration tests, the api gave these 2 messages as a response:
 
 by https
+
 ```
 {
   "data": {
@@ -35,6 +36,7 @@ by https
 ```
 
 by http
+
 ```
 {
   "data": {

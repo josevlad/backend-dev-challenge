@@ -1,245 +1,201 @@
 {
-	"info": {
-		"_postman_id": "2a5b338e-4db2-46a5-a09d-251fabdc26fa",
-		"name": "settle",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
-	},
-	"item": [
-		{
-			"name": "exchangers",
-			"item": [
-				{
-					"name": "http://localhost:8080/api/exchangers/1",
-					"request": {
-						"method": "GET",
-						"header": [
-							{
-								"key": "accept",
-								"value": "application/json"
-							}
-						],
-						"url": {
-							"raw": "http://localhost:8080/api/exchangers/1",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "8080",
-							"path": [
-								"api",
-								"exchangers",
-								"1"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "http://localhost:8080/api/exchangers/1",
-					"request": {
-						"method": "PUT",
-						"header": [
-							{
-								"key": "accept",
-								"value": "application/json"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n  \"name\": \"FXR los usureros\",\r\n  \"address\": \"No te lo voy a decir\",\r\n  \"description\": \"Somos una Exchange reconocido, no te dejes engañar por el nombre\",\r\n  \"foreignExchangeRate\": [\r\n    {\r\n      \"from\": \"EUR\",\r\n      \"to\": \"ARS\",\r\n      \"feePercentage\": 3\r\n    },\r\n    {\r\n      \"from\": \"ARS\",\r\n      \"to\": \"EUR\",\r\n      \"feePercentage\": 3\r\n    }\r\n  ]\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "http://localhost:8080/api/exchangers/1",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "8080",
-							"path": [
-								"api",
-								"exchangers",
-								"1"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "http://localhost:8080/api/exchangers/1",
-					"request": {
-						"method": "DELETE",
-						"header": [
-							{
-								"key": "accept",
-								"value": "application/json"
-							}
-						],
-						"url": {
-							"raw": "http://localhost:8080/api/exchangers/1",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "8080",
-							"path": [
-								"api",
-								"exchangers",
-								"1"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "http://localhost:8080/api/exchanger",
-					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "accept",
-								"value": "application/json"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n  \"name\": \"FXR los usureros\",\r\n  \"nickname\": \"FXRLU\",\r\n  \"address\": \"No te lo voy a decir\",\r\n  \"description\": \"Somos una Exchange reconocido, no te dejes engañar por el nombre\",\r\n  \"foreignExchangeRate\": [\r\n    {\r\n      \"from\": \"USD\",\r\n      \"to\": \"ARS\",\r\n      \"feePercentage\": 4\r\n    },\r\n    {\r\n      \"from\": \"EUR\",\r\n      \"to\": \"ARS\",\r\n      \"feePercentage\": 4\r\n    }\r\n  ]\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "http://localhost:8080/api/exchangers",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "8080",
-							"path": [
-								"api",
-								"exchangers"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "http://localhost:8080/api/exchanger",
-					"request": {
-						"method": "GET",
-						"header": [
-							{
-								"key": "accept",
-								"value": "application/json"
-							}
-						],
-						"url": {
-							"raw": "http://localhost:8080/api/exchangers",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "8080",
-							"path": [
-								"api",
-								"exchangers"
-							],
-							"query": [
-								{
-									"key": "limit",
-									"value": "1",
-									"disabled": true
-								},
-								{
-									"key": "page",
-									"value": "2",
-									"disabled": true
-								},
-								{
-									"key": "pair",
-									"value": "eur->ars",
-									"disabled": true
-								}
-							]
-						}
-					},
-					"response": []
-				}
-			]
-		},
-		{
-			"name": "quotations",
-			"item": [
-				{
-					"name": "http://localhost:8080/api/quotations/from/{from}/to/{to}/amount/{amount}",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "http://localhost:8080/api/quotations/from/{{from}}/to/{{to}}/amount/{{amount}}?exchangerId=1",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "8080",
-							"path": [
-								"api",
-								"quotations",
-								"from",
-								"{{from}}",
-								"to",
-								"{{to}}",
-								"amount",
-								"{{amount}}"
-							],
-							"query": [
-								{
-									"key": "exchangerId",
-									"value": "1"
-								}
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "http://localhost:8080/api/health",
-					"request": {
-						"method": "GET",
-						"header": [
-							{
-								"key": "accept",
-								"value": "application/json"
-							}
-						],
-						"url": {
-							"raw": "http://localhost:8080/api/health?cache=true",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "8080",
-							"path": [
-								"api",
-								"health"
-							],
-							"query": [
-								{
-									"key": "cache",
-									"value": "true"
-								}
-							]
-						}
-					},
-					"response": []
-				}
-			]
-		}
-	]
+  "info": {
+    "_postman_id": "2a5b338e-4db2-46a5-a09d-251fabdc26fa",
+    "name": "settle",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "exchangers",
+      "item": [
+        {
+          "name": "http://localhost:8080/api/exchangers/1",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "accept",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "http://localhost:8080/api/exchangers/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["api", "exchangers", "1"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "http://localhost:8080/api/exchangers/1",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"name\": \"FXR los usureros\",\r\n  \"address\": \"No te lo voy a decir\",\r\n  \"description\": \"Somos una Exchange reconocido, no te dejes engañar por el nombre\",\r\n  \"foreignExchangeRate\": [\r\n    {\r\n      \"from\": \"EUR\",\r\n      \"to\": \"ARS\",\r\n      \"feePercentage\": 3\r\n    },\r\n    {\r\n      \"from\": \"ARS\",\r\n      \"to\": \"EUR\",\r\n      \"feePercentage\": 3\r\n    }\r\n  ]\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/exchangers/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["api", "exchangers", "1"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "http://localhost:8080/api/exchangers/1",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "accept",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "http://localhost:8080/api/exchangers/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["api", "exchangers", "1"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "http://localhost:8080/api/exchanger",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"name\": \"FXR los usureros\",\r\n  \"nickname\": \"FXRLU\",\r\n  \"address\": \"No te lo voy a decir\",\r\n  \"description\": \"Somos una Exchange reconocido, no te dejes engañar por el nombre\",\r\n  \"foreignExchangeRate\": [\r\n    {\r\n      \"from\": \"USD\",\r\n      \"to\": \"ARS\",\r\n      \"feePercentage\": 4\r\n    },\r\n    {\r\n      \"from\": \"EUR\",\r\n      \"to\": \"ARS\",\r\n      \"feePercentage\": 4\r\n    }\r\n  ]\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/exchangers",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["api", "exchangers"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "http://localhost:8080/api/exchanger",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "accept",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "http://localhost:8080/api/exchangers",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["api", "exchangers"],
+              "query": [
+                {
+                  "key": "limit",
+                  "value": "1",
+                  "disabled": true
+                },
+                {
+                  "key": "page",
+                  "value": "2",
+                  "disabled": true
+                },
+                {
+                  "key": "pair",
+                  "value": "eur->ars",
+                  "disabled": true
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "quotations",
+      "item": [
+        {
+          "name": "http://localhost:8080/api/quotations/from/{from}/to/{to}/amount/{amount}",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/quotations/from/{{from}}/to/{{to}}/amount/{{amount}}?exchangerId=1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["api", "quotations", "from", "{{from}}", "to", "{{to}}", "amount", "{{amount}}"],
+              "query": [
+                {
+                  "key": "exchangerId",
+                  "value": "1"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "http://localhost:8080/api/health",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "accept",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "http://localhost:8080/api/health?cache=true",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["api", "health"],
+              "query": [
+                {
+                  "key": "cache",
+                  "value": "true"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
 }
